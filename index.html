@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Sparepart Motor</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding-bottom: 50px;
+        }
+        header {
+            background: linear-gradient(135deg, #6a0572, #ec9a29);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ec9a29 3px solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 36px;
+            animation: slideInDown 1s ease-out;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .about {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            text-align: center;
+        }
+        .about h2 {
+            color: #6a0572;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .about p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .slides {
+            display: flex;
+            transition: 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .controls button {
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        .controls button:hover {
+            background: #ec9a29;
+        }
+        .product-info {
+            padding: 20px;
+            background: #fff;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .product-info h2 {
+            color: #6a0572;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .product-info p {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .social-media {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            animation: zoomIn 1s ease-out;
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .social-media a:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+        .social-media .whatsapp {
+            background: #25D366;
+        }
+        .social-media .tiktok {
+            background: #010101;
+        }
+        .social-media .instagram {
+            background: #E4405F;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Toko Sparepart Motor</h1>
+    </header>
+
+    <div class="container">
+        <div class="about">
+            <h2>Tentang Kami</h2>
+            <p>Toko Sparepart Motor kami menyediakan berbagai macam suku cadang motor berkualitas tinggi yang siap menunjang performa kendaraan Anda. Kami mengutamakan kepuasan pelanggan dengan menawarkan produk-produk dari merek terpercaya dan layanan terbaik.</p>
+        </div>
+
+        <div class="slider" id="slider">
+            <div class="slides">
+                <img src="sparepart1.jpg" alt="Sparepart 1">
+                <img src="sparepart2.jpg" alt="Sparepart 2">
+                <img src="sparepart3.jpg" alt="Sparepart 3">
+                <img src="sparepart4.jpg" alt="Sparepart 4">
+            </div>
+            <div class="controls">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h2>Sparepart 1 - Knalpot Racing</h2>
+            <p>Material: Stainless Steel</p>
+            <p>Warna: Hitam Chrome</p>
+            <p>Harga: Rp 1.500.000</p>
+        </div>
+
+        <div class="product-info">
+            <h2>Sparepart 2 - Kampas Rem</h2>
+            <p>Material: Keramik</p>
+            <p>Warna: Abu-abu</p>
+            <p>Harga: Rp 250.000</p>
+        </div>
+
+        <div class="product-info">
+            <h2>Sparepart 3 - Ban Tubeless</h2>
+            <p>Ukuran: 90/80-17</p>
+            <p>Warna: Hitam</p>
+            <p>Harga: Rp 550.000</p>
+        </div>
+
+        <div class="product-info">
+            <h2>Sparepart 4 - Shockbreaker</h2>
+            <p>Material: Baja</p>
+            <p>Warna: Merah</p>
+            <p>Harga: Rp 750.000</p>
+        </div>
+    </div>
+
+    <div class="social-media">
+        <a href="https://wa.me/yourwa" class="whatsapp">WhatsApp</a>
+        <a href="https://www.tiktok.com/@yourtiktok" class="tiktok">TikTok</a>
+        <a href="https://www.instagram.com/yourinstagram" class="instagram">Instagram</a>
+    </div>
+
+    <script>
+        let slides = document.querySelector('.slides');
+        let slideIndex = 0;
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (slideIndex < 3) {
+                slideIndex++;
+            } else {
+                slideIndex = 0;
+            }
+            slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (slideIndex > 0) {
+                slideIndex--;
+            } else {
+                slideIndex = 3;
+            }
+            slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        });
+
+        // Implementing touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        slides.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        slides.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
